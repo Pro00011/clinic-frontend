@@ -1,0 +1,86 @@
+.header-wrapper {
+  position: absolute; /* Allows the image to sit under the header */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  color: #ffffff; /* All text in header is white */
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Thin transparent line */
+  font-size: 0.85rem;
+}
+
+.top-bar-left, .top-bar-right {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.social-icon {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.social-icon:hover {
+  opacity: 0.7;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 4rem;
+}
+
+.nav-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  background: transparent;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}
+
+.outline-btn {
+  border: 1px solid #ffffff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+}
+
+.outline-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 900px) {
+  .top-bar { display: none; }
+  .nav-links { display: none; /* In a real app, you'd add a hamburger menu here */ }
+  .navbar { padding: 1.5rem 2rem; }
+}

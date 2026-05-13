@@ -1,0 +1,63 @@
+.testimonials-section {
+  background-color: var(--bg-light);
+  text-align: center;
+}
+
+.testimonials-header h2 {
+  font-size: 2.5rem;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.testimonials-header p {
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background-color: var(--white);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  position: relative;
+}
+
+.quote-icon {
+  color: var(--primary);
+  opacity: 0.2;
+  font-size: 4rem;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-family: serif;
+  line-height: 1;
+}
+
+.feedback-text {
+  font-size: 1.1rem;
+  color: var(--text-main);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.patient-info h4 {
+  color: var(--primary-dark);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.patient-info span {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
