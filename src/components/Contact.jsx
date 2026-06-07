@@ -53,8 +53,16 @@ export default function Contact() {
           viewport={{ once: true }}
           className="map-placeholder"
         >
-          {/*  Google Maps iframe */}
-          [Interactive Map Placeholder]
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d392.07972292993946!2d76.8529202342131!3d30.72084052181143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f93f6764f950d%3A0xf92fa250a51f6c5!2sBoora%20PG!5e0!3m2!1sen!2sin!4v1780811518407!5m2!1sen!2sin"
+            width="800"
+            height="600"
+            style={{ border: 0, width: '100%', height: '100%', borderRadius: '20px' }}
+            allowFullScreen={true}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Clinic location map"
+          />
         </motion.div>
       </div>
     </section>

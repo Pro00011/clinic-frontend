@@ -25,7 +25,7 @@ export default function Navbar() {
         <div className="nav-links">
           <button 
             className="nav-link"
-            onClick={() => document.getElementById('hero').scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}
           >
             About Us
           </button>
@@ -49,6 +49,12 @@ export default function Navbar() {
             onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
           >
             Contact Us
+          </button>
+          <button 
+           className="nav-link"
+           onClick={() => document.getElementById('faq').scrollIntoView({ behavior: 'smooth' })}
+          >
+            FAQ
           </button>
 
           <button 
