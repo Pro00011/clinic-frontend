@@ -1,15 +1,27 @@
-import { motion } from 'framer-motion';
-import './Testimonials.css';
+import { motion } from "framer-motion";
+import "./Testimonials.css";
 
 const reviews = [
-  { name: "Sarah Jenkins", issue: "Post-Surgery Recovery", text: "The team here is phenomenal. I regained full mobility in my knee weeks faster than my surgeon predicted." },
-  { name: "Michael Chang", issue: "Sports Injury", text: "Professional, caring, and highly effective. They didn't just treat the pain, they fixed the root cause of my shoulder issue." },
-  { name: "Emma Robertson", issue: "Chronic Back Pain", text: "I've suffered from back pain for years. The manual therapy sessions here have truly given me my life back." }
+  {
+    name: "Rajender Kumar",
+    issue: "Post-Surgery Recovery",
+    text: "The team here is phenomenal. I regained full mobility in my knee weeks faster than my surgeon predicted.",
+  },
+  {
+    name: "Mohit",
+    issue: "Sports Injury",
+    text: "Professional, caring, and highly effective. They didn't just treat the pain, they fixed the root cause of my shoulder issue.",
+  },
+  {
+    name: "Kamal Devi",
+    issue: "Chronic Back Pain",
+    text: "I've suffered from back pain for years. The manual therapy sessions here have truly given me my life back.",
+  },
 ];
 
 export default function Testimonials() {
   return (
-    <section id='testimonials' className="testimonials-section section-padding">
+    <section id="testimonials" className="testimonials-section section-padding">
       <div className="testimonials-header">
         <h2>What Our Patients Say</h2>
         <p>Real stories of recovery and renewed strength.</p>

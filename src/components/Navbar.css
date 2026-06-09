@@ -15,7 +15,8 @@
   font-size: 0.85rem;
 }
 
-.top-bar-left, .top-bar-right {
+.top-bar-left,
+.top-bar-right {
   display: flex;
   gap: 1.5rem;
   align-items: center;
@@ -30,6 +31,7 @@
 .social-icon {
   cursor: pointer;
   transition: opacity 0.3s ease;
+  color: #ffffff;
 }
 
 .social-icon:hover {
@@ -80,7 +82,13 @@
 }
 
 @media (max-width: 900px) {
-  .top-bar { display: none; }
-  .nav-links { display: none; /* In a real app, you'd add a hamburger menu here */ }
-  .navbar { padding: 1.5rem 2rem; }
+  .top-bar {
+    display: none;
+  }
+  .nav-links {
+    display: none; /* In a real app, you'd add a hamburger menu here */
+  }
+  .navbar {
+    padding: 1.5rem 2rem;
+  }
 }
