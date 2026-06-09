@@ -79,7 +79,10 @@ export default function Footer() {
         <div className="footer-col social-col">
           <h3 className="footer-heading">WE'RE SOCIAL</h3>
           <div className="footer-socials">
-            <a href="#" target="_blank">
+            <a
+              href="https://www.facebook.com/share/r/1RszgHxds7/"
+              target="_blank"
+            >
               <FaFacebook size={16} className="social-icon" />
             </a>
             <a

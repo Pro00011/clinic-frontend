@@ -16,7 +16,10 @@ export default function Navbar() {
           </span>
         </div>
         <div className="top-bar-right">
-          <a href="#" target="_blank">
+          <a
+            href="https://www.facebook.com/share/r/1RszgHxds7/"
+            target="_blank"
+          >
             <FaFacebook size={16} className="social-icon" />
           </a>
           <a
