@@ -44,11 +44,15 @@ export default function Footer() {
             </div>
             <div className="contact-item">
               <Phone size={18} className="contact-icon" />
-              <span>+91 83970 12552</span>
+              <span><a href="tel:+918397012552" className="contact-link" >
+                  +91 83970-12552
+                </a></span>
             </div>
             <div className="contact-item">
               <Mail size={18} className="contact-icon" />
-              <span>care@physiocare.com</span>
+              <span><a href="mailto:happyyhealinhub@gmail.com" className="contact-link">
+                  happyyhealinhub@gmail.com
+                </a></span>
             </div>
           </div>
         </div>

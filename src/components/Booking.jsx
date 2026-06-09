@@ -4,7 +4,8 @@ import './Booking.css';
 
 export default function Booking() {
   const [selectedSlot, setSelectedSlot] = useState(null);
-  const [formData, setFormData] = useState({ name: '', phone: '', date: '' });
+  // 1. Added 'email' to the state
+  const [formData, setFormData] = useState({ name: '', phone: '', email: '', date: '' });
   const [status, setStatus] = useState('');
 
   const slots = ["09:00 AM", "10:30 AM", "01:00 PM", "03:30 PM", "05:00 PM"];
@@ -19,11 +20,21 @@ export default function Booking() {
     try {
       setStatus("Booking your slot...");
       
-      // Mock API call - replace with Axios later
+      // MOCK API CALL: Later, Axios will send formData to your Node.js backend here
+      /*
+      await axios.post('http://localhost:5000/api/bookings', {
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        date: formData.date,
+        time: selectedSlot
+      });
+      */
+
       setTimeout(() => {
         setStatus("Success! Your appointment is confirmed.");
         setSelectedSlot(null);
-        setFormData({ name: '', phone: '', date: '' });
+        setFormData({ name: '', phone: '', email: '', date: '' });
       }, 1500);
 
     } catch (error) {
@@ -52,6 +63,15 @@ export default function Booking() {
               type="tel" placeholder="Phone Number" required
               className="form-input"
               value={formData.phone} onChange={(e) => setFormData({...formData, phone: e.target.value})}
+            />
+          </div>
+
+          {/* 2. Added the Email Input Field */}
+          <div className="form-control">
+            <input 
+              type="email" placeholder="Email Address" required
+              className="form-input"
+              value={formData.email} onChange={(e) => setFormData({...formData, email: e.target.value})}
             />
           </div>
 

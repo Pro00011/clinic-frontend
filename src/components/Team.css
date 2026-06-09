@@ -1,0 +1,102 @@
+/* src/components/Team.css */
+.team-section {
+  background-color: var(--white);
+}
+
+.team-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.team-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem; /* Space between the two doctor rows */
+  margin-top: 3rem;
+}
+
+.doctor-horizontal-card {
+  display: flex;
+  flex-direction: row; /* Horizontal Layout */
+  align-items: center;
+  background-color: var(--bg-light);
+  padding: 2.5rem;
+  border-radius: 20px;
+  gap: 3rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.doctor-horizontal-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.doctor-image-circle {
+  flex-shrink: 0; /* Prevents the circle from squishing */
+  width: 220px;
+  height: 220px;
+  border-radius: 50%; /* Makes it a circle */
+  overflow: hidden;
+  border: 5px solid var(--white);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.doctor-image-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.doctor-details {
+  text-align: left;
+}
+
+.doctor-name {
+  font-size: 1.8rem;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+
+.doctor-title {
+  font-size: 1.1rem;
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.doctor-specialty {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.doctor-bio {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* Responsive: Stack them vertically on mobile phones */
+@media (max-width: 768px) {
+  .doctor-horizontal-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+  
+  .doctor-details {
+    text-align: center;
+  }
+  
+  .doctor-image-circle {
+    width: 180px;
+    height: 180px;
+  }
+}
