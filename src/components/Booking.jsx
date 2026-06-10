@@ -1,44 +1,48 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import axios from 'axios'; // <-- 1. Imported Axios
 import './Booking.css';
 
 export default function Booking() {
   const [selectedSlot, setSelectedSlot] = useState(null);
-  // 1. Added 'email' to the state
   const [formData, setFormData] = useState({ name: '', phone: '', email: '', date: '' });
   const [status, setStatus] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false); // <-- Added a loading state
 
   const slots = ["09:00 AM", "10:30 AM", "01:00 PM", "03:30 PM", "05:00 PM"];
 
   const handleBooking = async (e) => {
     e.preventDefault();
     if (!selectedSlot || !formData.date) {
-      setStatus("Please select a date and a time slot.");
+      setStatus("⚠️ Please select a date and a time slot.");
       return;
     }
 
     try {
-      setStatus("Booking your slot...");
+      setIsSubmitting(true);
+      setStatus("⏳ Booking your slot...");
       
-      // MOCK API CALL: Later, Axios will send formData to your Node.js backend here
-      /*
-      await axios.post('http://localhost:5000/api/bookings', {
+      // 2. Send the real data to your Node.js Backend!
+      const response = await axios.post('http://physio-backend.railway.internal/api/bookings/new', {
         name: formData.name,
         phone: formData.phone,
         email: formData.email,
         date: formData.date,
         time: selectedSlot
       });
-      */
 
-      setTimeout(() => {
-        setStatus("Success! Your appointment is confirmed.");
+      // 3. If successful, clear the form and show success message
+      if (response.status === 201) {
+        setStatus("✅ Success! Your appointment is confirmed.");
         setSelectedSlot(null);
         setFormData({ name: '', phone: '', email: '', date: '' });
-      }, 1500);
+      }
 
     } catch (error) {
-      setStatus("Failed to book slot. Try again.");
+      console.error("Booking Error:", error);
+      setStatus("❌ Failed to book slot. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -60,13 +64,12 @@ export default function Booking() {
               value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})}
             />
             <input 
-              type="tel" placeholder="Phone Number" required
+              type="tel" placeholder="Phone Number (e.g. +918397012552)" required
               className="form-input"
               value={formData.phone} onChange={(e) => setFormData({...formData, phone: e.target.value})}
             />
           </div>
 
-          {/* 2. Added the Email Input Field */}
           <div className="form-control">
             <input 
               type="email" placeholder="Email Address" required
@@ -93,6 +96,7 @@ export default function Booking() {
                   key={slot}
                   onClick={() => setSelectedSlot(slot)}
                   className={`slot-btn ${selectedSlot === slot ? 'selected' : ''}`}
+                  disabled={isSubmitting} // Prevent changing slots while booking
                 >
                   {slot}
                 </button>
@@ -100,11 +104,11 @@ export default function Booking() {
             </div>
           </div>
 
-          <button type="submit" className="btn submit-btn">
-            Confirm Appointment
+          <button type="submit" className="btn submit-btn" disabled={isSubmitting}>
+            {isSubmitting ? 'Confirming...' : 'Confirm Appointment'}
           </button>
           
-          {status && <p className="status-msg">{status}</p>}
+          {status && <p className="status-msg" style={{ marginTop: '1rem', fontWeight: 'bold' }}>{status}</p>}
         </form>
       </motion.div>
     </section>
