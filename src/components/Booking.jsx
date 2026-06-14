@@ -23,7 +23,7 @@ export default function Booking() {
       setStatus("⏳ Booking your slot...");
       
       // 2. Send the real data to your Node.js Backend!
-      const response = await axios.post('http://physio-backend.railway.internal/api/bookings/new', {
+      const response = await axios.post('https://clinic-backend-ajge.onrender.com/api/bookings/new', {
         name: formData.name,
         phone: formData.phone,
         email: formData.email,
