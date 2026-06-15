@@ -44,7 +44,7 @@ export default function Footer() {
           <div className="contact-list">
             <div className="contact-item">
               <MapPin size={18} className="contact-icon" />
-              <span>Near Anjali Labs, Jindal Chowk,Hisar, HR</span>
+              <span>Opposite New Court,Hansi, 125033, HR</span>
             </div>
             <div className="contact-item">
               <Clock size={18} className="contact-icon" />
@@ -66,10 +66,10 @@ export default function Footer() {
               <Mail size={18} className="contact-icon" />
               <span>
                 <a
-                  href="mailto:happyyhealinhub@gmail.com"
+                  href="mailto:dr.sachin@happyyhealinghub.in"
                   className="contact-link"
                 >
-                  happyyhealinhub@gmail.com
+                  dr.sachin@happyyhealinghub.in
                 </a>
               </span>
             </div>
