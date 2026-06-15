@@ -15,7 +15,7 @@ export default function AdminDashboard() {
 
     try {
       // Replace this URL with your actual live backend URL
-      const response = await axios.get('https://physio-backend-production-bf99.up.railway.app/api/bookings/all', {
+      const response = await axios.get('https://clinic-backend-ajge.onrender.com//api/bookings/all', {
         headers: { 'x-admin-passcode': passcode }
       });
       
@@ -35,7 +35,7 @@ export default function AdminDashboard() {
     const savedToken = sessionStorage.getItem('admin_token');
     if (savedToken) {
       setPasscode(savedToken);
-      axios.get('https://physio-backend-production-bf99.up.railway.app/api/bookings/all', {
+      axios.get('https://clinic-backend-ajge.onrender.com//api/bookings/all', {
         headers: { 'x-admin-passcode': savedToken }
       }).then(res => {
         setBookings(res.data);
