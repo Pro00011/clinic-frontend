@@ -9,7 +9,7 @@ export default function Navbar() {
       <div className="top-bar">
         <div className="top-bar-left">
           <span className="flex-center">
-            <MapPin size={14} /> Near Anjali Labs, Jindal Chowk,Hisar, HR
+            <MapPin size={14} /> Opposite New Court,Hansi, 125033, HR
           </span>
           <span className="flex-center">
             <Phone size={14} /> +91 83970 12552
