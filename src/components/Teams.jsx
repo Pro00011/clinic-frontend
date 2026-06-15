@@ -1,20 +1,18 @@
-import './Team.css';
+import "./Team.css";
 
 const doctors = [
   {
     name: "Dr. Sachiin Yadav",
     title: "BPT, MPT Orthopedic and Sports HSCP /PT /2024 /2755",
     specialty: "Sports Injuries & Orthopedics",
-    // Replace this placeholder with the actual image URL or local path
-    image: "src/assets/man.png"
+    image: "/man.png", // <-- Just use a string starting with a slash!
   },
   {
     name: "Dr. Rajesh kumari",
     title: "BPT Gold Medalist, MPT Neuro.HSCP /PT /2024 /3039",
     specialty: "Neurological & Geriatric Care",
-    // Replace this placeholder with the actual image URL or local path
-    image: "src/assets/women.png"
-  }
+    image: "/women.png", // <-- Just use a string starting with a slash!
+  },
 ];
 
 export default function Team() {
@@ -32,12 +30,11 @@ export default function Team() {
               <div className="doctor-image-circle">
                 <img src={doctor.image} alt={doctor.name} />
               </div>
-              
+
               <div className="doctor-details">
                 <h3 className="doctor-name">{doctor.name}</h3>
                 <h4 className="doctor-title">{doctor.title}</h4>
                 <p className="doctor-specialty">{doctor.specialty}</p>
-                <p className="doctor-bio">{doctor.bio}</p>
               </div>
             </div>
           ))}
