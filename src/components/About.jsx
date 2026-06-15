@@ -1,4 +1,5 @@
 import { CheckCircle } from "lucide-react";
+import physioImage from "../assets/physio.jpg";
 import "./About.css";
 
 export default function About() {
@@ -13,9 +14,8 @@ export default function About() {
     <section id="about" className="about-section section-padding">
       <div className="about-container">
         <div className="about-image-wrapper">
-          {/* Replace this URL with a real photo of your team/clinic later */}
           <img
-            src="src/assets/physio.jpg"
+            src={physioImage}
             alt="Physiotherapist working with a patient"
             className="about-image"
           />
