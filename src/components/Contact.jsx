@@ -17,8 +17,12 @@ export default function Contact() {
           <div className="info-item">
             <div className="info-icon"><MapPin size={24} /></div>
             <div className="info-text">
-              <h4>Location</h4>
-              <p>Near Anjali Labs, Jindal Chowk<br/>Hisar, HR</p>
+             <h4>Location</h4>
+              <p>
+                Opposite New Court,
+                <br />
+                Hansi, 125033, HR
+              </p>
             </div>
           </div>
 
@@ -41,8 +45,8 @@ export default function Contact() {
               <h4>Email</h4>
               <p>
                 {/* Added mailto: link */}
-                <a href="mailto:happyyhealinhub@gmail.com" className="contact-link">
-                  happyyhealinhub@gmail.com
+                <a href="mailto:dr.sachin@happyyhealinghub.in" className="contact-link">
+                 dr.sachin@happyyhealinghub.in
                 </a>
               </p>
             </div>
@@ -63,11 +67,16 @@ export default function Contact() {
           viewport={{ once: true }}
           className="map-placeholder"
         >
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3486.5256231977496!2d75.97789897497384!3d29.090159763153423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391239004ff49d01%3A0xb1bf6d69f8efc808!2sHappyy%20Healing%20Hub%20physiotherapy%20And%20rehabilitation%20Centre!5e0!3m2!1sen!2sin!4v1781017094975!5m2!1sen!2sin" 
+           <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3486.525781904494!2d75.97789897539843!3d29.090155075417943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391239004ff49d01%3A0xb1bf6d69f8efc808!2sHappyy%20Healing%20Hub%20physiotherapy%20And%20rehabilitation%20Centre!5e0!3m2!1sen!2sin!4v1781143897157!5m2!1sen!2sin"
             width="800"
             height="600"
-            style={{ border: 0, width: '100%', height: '100%', borderRadius: '20px' }}
+            style={{
+              border: 0,
+              width: "100%",
+              height: "100%",
+              borderRadius: "20px",
+            }}
             allowFullScreen={true}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
