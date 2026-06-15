@@ -1,17 +1,19 @@
 import "./Team.css";
+import manImage from "../assets/man.png";
+import womenImage from "../assets/women.png";
 
 const doctors = [
   {
     name: "Dr. Sachiin Yadav",
     title: "BPT, MPT Orthopedic and Sports HSCP /PT /2024 /2755",
     specialty: "Sports Injuries & Orthopedics",
-    image: "/man.png", // <-- Just use a string starting with a slash!
+    image: manImage,
   },
   {
     name: "Dr. Rajesh kumari",
     title: "BPT Gold Medalist, MPT Neuro.HSCP /PT /2024 /3039",
     specialty: "Neurological & Geriatric Care",
-    image: "/women.png", // <-- Just use a string starting with a slash!
+    image: womenImage,
   },
 ];
 
