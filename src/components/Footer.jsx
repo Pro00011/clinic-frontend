@@ -100,10 +100,10 @@ export default function Footer() {
             </a>
           </div>
           <div className="copyright">
-            <p>© 2026 PhysioCare.</p>
+            <p>© 2026 HHHPhysiotherapy.</p>
             <p>All Rights Reserved.</p>
             {/* <p>
-              Distributed by <span className="teal-text">Rahul</span>.
+              Distributed by <span className="teal-text">Rahul&GouravBeniwal</span>.
             </p> */}
           </div>
         </div>
