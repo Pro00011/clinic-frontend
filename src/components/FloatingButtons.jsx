@@ -44,7 +44,7 @@ export default function FloatingButtons() {
       {/* WhatsApp Button */}
       {/* Replace '15551234567' with your actual country code + phone number (no plus or dashes) */}
       <a 
-        href="https://wa.me/+918708243427?text=Hi%20PhysioCare!%20I%20would%20like%20to%20know%20more%20about%20your%20services." 
+        href="https://wa.me/+918397012552?text=Hi%20HappyyHealingHub!%20I%20would%20like%20to%20know%20more%20about%20your%20services." 
         target="_blank" 
         rel="noopener noreferrer" 
         className="action-btn whatsapp-btn"
